@@ -1,0 +1,110 @@
+<div class="top-menu">
+    <div class="left">
+      <div class="logo">
+        <img src="assets/IMG_7382.jpg" alt="Profile Icon" class="profile-icon mr-3">
+      </div>
+      <nav class="center" [hidden]="!isMenuVisible && !isSidebarOpen">
+        <a routerLink="/">Home</a>
+        <a routerLink="/liveSessions">Live Sessions</a>
+        <a routerLink="/videoSeries">Video Series</a>
+        <a routerLink="/AP-Books">AP Books</a>
+        <a routerLink="/AP-articles">AP Articles</a>
+        <a routerLink="/invite">Invite</a>
+        <a routerLink="/in-Media">In Media</a>
+        <a routerLink="/donate">Donate</a>
+      </nav>
+    </div>
+    <div class="header-buttons example-button-row" [hidden]="!isHeaderVisible && !isSidebarOpen">           
+      <button type="button" class="btn btn-outline-light">EN</button>
+      <mat-icon >phone</mat-icon>
+    </div>
+    <div class="menu-wrapper" [ngClass]="{'open': isSidebarOpen}">
+        <mat-icon class="responsive-icon" (click)="toggleMenu()">{{ isSidebarOpen ? 'close' : 'menu' }}</mat-icon>
+      </div>
+  </div>
+  
+  <div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+    <div class="profile-section">
+        <div class="profile-info">
+            <img src="assets/IMG_7382.jpg" alt="Profile Image" class="profile-icon">
+            <div class="user-details">
+                <p>John Doe</p>
+                <p>Johndoe@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <ul class="sidebar-menu">
+        <li>Bhagavad Gita</li>
+        <li>Sant Sarita</li>
+        <li>Ashtavakra Samhita</li>
+        <li>AP Books</li>
+        <li>AP Articles</li>
+        <li>Video Series</li>
+        <li>AP Circle</li>
+        <li>Invite For an Interview</li>
+        <li>Invite For Talk</li>
+        <li>Media and Public Interaction</li>
+        <li>Contact Us</li>
+        <li>Donate</li>
+        <hr>
+        <h5 class="mt-2">My Account</h5>
+        <li>My Video Series</li>
+        <li>My eBooks</li>
+        <li>Recorded Sessions</li>
+        <li>My Cart</li>
+        <li>My Donations</li>
+        <li>My Orders</li>
+        <li>Scholarship Requests</li>
+        <hr>
+        <h5 class="mt-2">More</h5>
+        <li>PrashantAdvait Foundation</li>
+        <li>Ghar Ghar Upanishad</li>
+        <li>About Acharya Prashant</li>
+        <hr>
+        <h5 class="mt-2">Explore Categories</h5>
+        <li>Vedant - Upanishads</li>
+        <li>Vedant - Bhagavad Gita</li>
+        <li>Other Scriptures</li>
+        <li>Saints and Masters</li>
+        <li>Other Streams</li>
+        <li>Life Questions</li>
+        <li class="mb-4">Technical Support</li>
+    </ul>
+    <div class="sidebar-footer">
+        <p >LOGOUT</p>
+    </div>
+</div>
+
+<div class="new-header">
+    <div class="red-point"></div>
+    <div class="header-content d-inline-flex">
+      <p class="header-text">Get access to all 350+ video series at once!</p>
+      <button class="btn btn-outline-light donate-button btn-sm">Click Here</button>
+    </div>
+  </div>
+
+  <div class="second-header">
+    <div class="left-content">
+      <p class="video-series-text">Video Series</p>
+      <div class="custom-search">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              All
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            </ul>
+          </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for video series">
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+    <div class="right-content">
+        <i class="fa fa-search"></i>
+      <button class="btn btn-sm video-button ">My Video Series</button>
+    </div>
+  </div>

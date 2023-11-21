@@ -1,0 +1,16 @@
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div *ngFor="let qa of faqData" class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#faqCollapse-' + qa.id" aria-expanded="false"
+              [attr.aria-controls]="'faqCollapse-' + qa.id">
+        {{ qa.question }}
+      </button>
+    </h2>
+    <div [attr.id]="'faqCollapse-' + qa.id" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        {{ qa.answer }}
+      </div>
+    </div>
+  </div>
+</div>

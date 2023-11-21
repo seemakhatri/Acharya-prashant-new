@@ -1,0 +1,18 @@
+ <div *ngIf="courseSeriesData && courseSeriesData.courses">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let course of courseSeriesData.courses; let i = index">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-index">भाग {{ i + 1 }} </h5>
+                  <h6 class="card-title">{{ course.title }}</h6>
+                  <h6 class="card-subtitle mb-2 text-muted">{{ course.subtitle }}</h6>
+                  <p class="card-text">Course Hour: {{ course.courseHours }}</p>
+                  <p class="card-text">Contribution: ₹{{ course.amount }} <s>₹{{ course.originalAmount }}</s></p>
+                  <h5 class="course-language">{{ course.language }}</h5>
+                  <button class="btn btn-warning">Add to Cart</button>
+                  <button class="btn btn-warning"> | &nbsp;&nbsp;&nbsp;Enroll</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
